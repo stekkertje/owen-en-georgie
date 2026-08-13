@@ -1,1 +1,9 @@
-PLACEHOLDER
+/* Live ebook clone — Owen & Georgie */
+@import url("https://cdn.jsdelivr.net/gh/stekkertje/owen-en-georgie@9c9e1ebe873bb9ff60fa2eef029f6582a7ae24d0/styles.css");
+
+/* Hide thicker gold accent line on mobile text cards */
+@media (max-width: 1023px) {
+  .page:not(.page--cover) .story-card:before {
+    display: none !important;
+  }
+}
