@@ -16,7 +16,7 @@
     opacity: 0.28;
   }
 
-  /* Subtle bottom sparkles (CSS-only, works without extra HTML) */
+  /* Subtle bottom sparkles */
   .storybook:after {
     content: "";
     position: fixed;
@@ -26,7 +26,6 @@
     height: 32vh;
     pointer-events: none;
     z-index: 3;
-    opacity: 0.7;
     background-image:
       radial-gradient(circle 1.5px at 8% 55%, rgba(255, 246, 207, 0.9), transparent 70%),
       radial-gradient(circle 1px at 18% 82%, rgba(255, 235, 165, 0.55), transparent 70%),
@@ -37,6 +36,25 @@
       radial-gradient(circle 2px at 88% 42%, rgba(255, 246, 207, 0.8), transparent 70%),
       radial-gradient(circle 1px at 94% 70%, rgba(255, 235, 165, 0.45), transparent 70%);
     animation: mobile-bottom-twinkle 4.2s ease-in-out infinite alternate;
+  }
+
+  /* Nav arrows higher: top of icons at bottom of upper guide line */
+  .page:not(.page--cover) .story-stack > .page-nav,
+  .page:not(.page--cover) .page-nav,
+  .artwork-wrap > .page-nav.artwork-nav {
+    top: calc(100vw - 78px) !important;
+    bottom: auto !important;
+  }
+
+  /* Text card top higher (second guide line), bottom stays = more text space */
+  .page:not(.page--cover) .story-stack {
+    padding-top: 0 !important;
+    margin-top: -8px !important;
+  }
+
+  .page:not(.page--cover) .story-stack .story-card,
+  .page:not(.page--cover) .story-card {
+    max-height: calc(100dvh - 100vw + 28px) !important;
   }
 }
 
