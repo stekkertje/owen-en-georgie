@@ -1,0 +1,12 @@
+/* Mobile: hide gold accent stripe on text card */
+@media (max-width: 1023px) {
+  .page:not(.page--cover) .story-card:before,
+  .story-card:before {
+    display: none !important;
+    content: none !important;
+    height: 0 !important;
+    width: 0 !important;
+    background: none !important;
+    opacity: 0 !important;
+  }
+}
